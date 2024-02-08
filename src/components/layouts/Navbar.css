@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f2f2f2; /* Background color for the body */
+  }
+  
+  .parent-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #3498db;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle lift effect */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .parent-div:hover {
+    background-color: #3c00ff; /* Darken the background on hover */
+  }
+  
+  .mainlogo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .pages {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pages ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .pages ul li {
+    margin: 0 15px;
+  }
+  
+  .pages ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .pages ul li a:hover {
+    color: #e74c3c;
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  .account {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .account a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px; /* Increased margin for better separation */
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform animation */
+  }
+  
+  .account a:hover {
+    color: #e74c3c;
+    transform: scale(1.1); /* Enlarge on hover */
+  }
+  
+  .menu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu img {
+    width: 35px;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu:hover img {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 500px) {
+    .parent-div {
+      padding: 15px; /* Decreased padding for small screens */
+    }
+  
+    .menu {
+      display: flex;
+    }
+  
+    .pages ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #1c344d;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100%;
+    }
+  
+    .pages .open {
+      display: flex;
+    }
+  
+    .pages ul li {
+      margin: 15px;
+    }
+  
+    .menu img {
+      transform: rotate(0deg);
+    }
+  
+    .account a {
+      margin-right: 10px;
+    }
+  }
+  
